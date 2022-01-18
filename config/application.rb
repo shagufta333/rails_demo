@@ -28,22 +28,12 @@ module RailsDemo
       allow do
         origins '*'
         resource '*'
-        headers: :any,
-        methods: %i[get post put delete],
-        expose: %w(access-token expiry token-type uid client),
+        headers: :any
+        methods: %i[get post put delete]
+        expose: %w(access-token expiry token-type uid client)
         max_age:0
       end
     end
-  end
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
 
-    # Only loads a smaller set of middleware suitable for API only apps.
-    # Middleware like session, flash, cookies can be added back manually.
-    # Skip views, helpers and assets when generating a new resource.
-    
+
+  end
